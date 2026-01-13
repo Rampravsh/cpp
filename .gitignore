@@ -1,5 +1,7 @@
 readme.md
-.exe
-a.out
-build/
+*.exe
+*.out
+/build
 .vscode/
+
+
