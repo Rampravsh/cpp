@@ -25,7 +25,17 @@ int main() {
 
     //NULL POINTER👍
 
-    int** ptr=NULL;
-    cout<<"ptr: " <<ptr<<endl;
+    // int** ptr=NULL;
+    // cout<<"ptr: " <<ptr<<endl;
+
+    // problem on pointer 👍
+    int a =5;
+    int*p=&a;
+    int** q=&p;
+    cout<<*p<<endl;
+    cout<<**q<<endl;
+    cout<<&a<<endl;
+    cout<<p<<endl;
+    cout<<*q<<endl;
     return 0;
 }
