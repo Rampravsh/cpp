@@ -8,6 +8,9 @@ int main() {
     int* ptr =&a;
     cout<<ptr<<endl;
 
+    int** ptrOfptr=&ptr;
+    cout<<"ptrOfptr: "<<ptrOfptr<<endl;
+
     float price= 100.25f;
     float*ptr2=&price;
     cout <<"ptr2: " << ptr2 <<"\n&price: "<<&price<<endl;
