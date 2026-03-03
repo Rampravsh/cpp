@@ -21,20 +21,29 @@ public:
         dept = "Computer Science";
     };
 
-    //parameterized
-    // Teacher(string n, string d, string s, double sal)
-    // {
-    //     name = n;
-    //     dept = d;
-    //     subject = s;
-    //     salary = sal;
-    // }
+    // parameterized
+    //  Teacher(string n, string d, string s, double sal)
+    //  {
+    //      name = n;
+    //      dept = d;
+    //      subject = s;
+    //      salary = sal;
+    //  }
     Teacher(string name, string dept, string subject, double salary)
     {
         this->name = name;
         this->dept = dept;
         this->subject = subject;
         this->salary = salary;
+    }
+    // copy constructor
+    Teacher(Teacher &t)
+    {
+        cout << "i am custom copy constructor\n";
+        name = t.name;
+        dept = t.dept;
+        subject = t.subject;
+        salary = t.salary;
     }
 
     // methods || member fuction
@@ -87,6 +96,9 @@ int main()
     // t1.salary = 25000;
     // cout << t1.name << endl;
     // cout << t1.dept << endl;
-    t1.getInfo();
+    // t1.getInfo();
+
+    Teacher t2(t1); // default copy constructor -invoke
+    t2.getInfo();
     return 0;
 }
